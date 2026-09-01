@@ -2,19 +2,18 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { ArrowUpRight, X } from 'lucide-react';
-
-const links = [
-  { name: 'Home', href: '/' }, { name: 'Our brands', href: '/brands' }, { name: 'Our story', href: '/about' }, { name: 'Stockists', href: '/where-to-buy' }, { name: 'Contact', href: '/contact' },
-];
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
-  useEffect(() => {
-    document.body.style.overflow = open ? 'hidden' : '';
-    const closeOnEscape = (event: KeyboardEvent) => event.key === 'Escape' && setOpen(false);
-    window.addEventListener('keydown', closeOnEscape);
-    return () => { document.body.style.overflow = ''; window.removeEventListener('keydown', closeOnEscape); };
-  }, [open]);
-  return <header className="foundry-nav"><Link href="/" className="nav-logo" aria-label="Dextron Enterprise home"><img src="/images/Dextron_logo.png" alt="Dextron Enterprise" /></Link><button className="nav-menu" onClick={() => setOpen(true)} aria-label="Open menu"><span /><span /> <b>Menu</b></button><div className={`menu-panel ${open ? 'is-open' : ''}`}><div className="menu-head"><span>Navigation</span><button onClick={() => setOpen(false)} aria-label="Close menu"><X /></button></div><nav>{links.map((link, index) => <Link key={link.href} href={link.href} onClick={() => setOpen(false)}><small>0{index + 1}</small><span>{link.name}</span><ArrowUpRight /></Link>)}</nav><div className="menu-foot"><p>Dextron Enterprise<br />Nairobi, Kenya</p><a href="mailto:info@dextron.co.ke">info@dextron.co.ke</a></div></div></header>;
+  return (
+    <nav className="site-nav">
+      <Link href="/" className="nav-logo">DEXTRON®</Link>
+      <div className="nav-links">
+        <a href="#brands" className="hover-target">Brands</a>
+        <a href="#advantage" className="hover-target">Advantage</a>
+        <a href="#voices" className="hover-target">Voices</a>
+        <a href="#contact" className="hover-target">Contact</a>
+      </div>
+      <Link href="#contact" className="nav-cta hover-target">Order Now</Link>
+    </nav>
+  );
 }

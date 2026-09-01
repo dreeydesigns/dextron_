@@ -47,6 +47,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="min-h-screen flex flex-col antialiased selection:bg-dextron-blue selection:text-white">
+        <div id="cursorDot" className="cursor-dot" />
+        <div id="cursorRing" className="cursor-ring" />
         <MotionSystem />
         <Navbar />
         <div className="flex-1">{children}</div>

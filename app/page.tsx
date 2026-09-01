@@ -1,29 +1,237 @@
 import Link from 'next/link';
-import { ArrowRight, ArrowUpRight, MapPin, MessageCircle, Phone } from 'lucide-react';
+import { MessageCircle, Phone, ArrowRight, ArrowUpRight } from 'lucide-react';
 import { getWhatsAppLink } from '@/lib/whatsapp';
 
-const brands = [
-  { id: '01', eyebrow: 'Baby care', name: <>Nuna<br />Diapers</>, description: '12-hour leak protection with premium Japanese absorbent polymers. Designed for Kenyan babies, tested to KEBS standards.', tags: ['Hypoallergenic', '12h protection', 'Soft touch'], image: '/images/Nuna_Daipers_Front.jpg', href: '/brands/nuna-diapers', colour: 'nuna' },
-  { id: '02', eyebrow: 'Infant nutrition', name: <>Nunalac<br />Formula</>, description: 'Milk-based infant formula, crafted for nourishing beginnings and the confidence that comes with every spoonful.', tags: ['Stage 1', 'Milk based', '0–12 months'], image: '/images/Nunalac_Infant_formula_single.webp', href: '/brands/nunalac', colour: 'nunalac' },
-  { id: '03', eyebrow: 'Feminine care', name: <>Bilan<br />Pads</>, description: 'Superior comfort and dependable everyday protection, made for Kenyan women and active lives.', tags: ['Soft comfort', 'Ultra thin', 'Everyday care'], image: '/images/BilanAlwaysRegular.webp', href: '/brands/bilan', colour: 'bilan' },
-];
-
 export default function HomePage() {
-  return <main className="premium-home">
-    <section className="clean-hero">
-      <p className="hero-kicker">— Proudly Kenyan FMCG manufacturer</p>
-      <div><h1 data-split>Nurturing Kenyan<br />families with <span>quality<br />care.</span></h1><p className="hero-copy">Premium baby diapers, infant nutrition, feminine hygiene and household essentials — made for Kenyan families, priced for real life.</p><div className="hero-buttons"><a href={getWhatsAppLink('Hello Dextron Enterprise! I would like to order products.')} target="_blank" rel="noopener noreferrer" className="clean-button dark"><MessageCircle /> Order on WhatsApp</a><a href="#brands" className="clean-button">Explore brands <ArrowRight /></a></div></div>
-      <div className="hero-stats"><div><b>500+</b><span>Stockists nationwide</span></div><div><b>100%</b><span>KEBS certified</span></div><div><b>50K+</b><span>Happy households</span></div></div>
+  return <main>
+    {/* Hero */}
+    <section className="hero">
+      <div className="hero-meta reveal" style={{ marginBottom: '4rem' }}>
+        <span>— Proudly Kenyan FMCG Manufacturer · Est. 2018</span>
+      </div>
+      <div>
+        <h1 className="hero-title" id="heroTitle">
+          Nurturing Kenyan<br />
+          Families with <span className="accent">Quality</span><br />
+          <span className="accent">Care.</span>
+        </h1>
+        <p className="hero-sub reveal">
+          Premium baby diapers, fortified infant cereals, feminine hygiene pads, and household detergents — made for Kenyan families, priced for real life.
+        </p>
+        <div className="reveal" style={{ marginTop: '3rem', display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+          <a href={getWhatsAppLink('Hello Dextron Enterprise! I would like to order products.')} target="_blank" rel="noopener noreferrer" className="btn btn-primary hover-target" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.625rem' }}>
+            <MessageCircle style={{ width: '16px', height: '16px' }} />
+            Order on WhatsApp
+          </a>
+          <a href="#brands" className="btn btn-outline hover-target" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.625rem' }}>
+            Explore Brands
+            <ArrowRight style={{ width: '16px', height: '16px' }} />
+          </a>
+        </div>
+      </div>
+      <div className="reveal" style={{ display: 'flex', gap: '4rem', flexWrap: 'wrap' }}>
+        <div>
+          <div style={{ fontSize: '2rem', fontWeight: '900', letterSpacing: '-0.03em' }}>500+</div>
+          <div style={{ fontSize: '0.6875rem', color: '#737373', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: '0.5rem' }}>Stockists Nationwide</div>
+        </div>
+        <div>
+          <div style={{ fontSize: '2rem', fontWeight: '900', letterSpacing: '-0.03em' }}>100%</div>
+          <div style={{ fontSize: '0.6875rem', color: '#737373', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: '0.5rem' }}>KEBS Certified</div>
+        </div>
+        <div>
+          <div style={{ fontSize: '2rem', fontWeight: '900', letterSpacing: '-0.03em' }}>50K+</div>
+          <div style={{ fontSize: '0.6875rem', color: '#737373', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: '0.5rem' }}>Happy Households</div>
+        </div>
+      </div>
     </section>
 
-    <div className="clean-marquee"><div>NUNA <i>•</i> DIAPERS <i>•</i> NUNALAC <i>•</i> INFANT NUTRITION <i>•</i> BILAN <i>•</i> FEMININE CARE <i>•</i> SOFRESH <i>•</i> HOME ESSENTIALS <i>•</i></div></div>
+    {/* Marquee */}
+    <div className="marquee">
+      <div className="marquee-track">
+        <span>NUNA</span> · DIAPERS <span>·</span> NUNALAC <span>·</span> CEREAL <span>·</span> BILAN <span>·</span> PADS <span>·</span> SOFRESH <span>·</span> HOME <span>·</span>
+        <span>NUNA</span> · DIAPERS <span>·</span> NUNALAC <span>·</span> CEREAL <span>·</span> BILAN <span>·</span> PADS <span>·</span> SOFRESH <span>·</span> HOME <span>·</span>
+      </div>
+    </div>
 
-    <section id="brands" className="brand-series">{brands.map((brand, index) => <article className={`clean-brand ${brand.colour} ${index % 2 ? 'is-reverse' : ''}`} key={brand.id} data-reveal><div className="clean-art" data-image-reveal><img src={brand.image} alt={`${brand.eyebrow}: ${index === 1 ? 'Nunalac formula' : index === 0 ? 'Nuna diapers' : 'Bilan pads'}`} /></div><div className="clean-brand-copy"><p className="clean-index">{brand.id} — {brand.eyebrow}</p><h2>{brand.name}</h2><p className="clean-description">{brand.description}</p><div className="clean-tags">{brand.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><Link className="clean-button" href={brand.href}>View product <ArrowUpRight /></Link></div></article>)}</section>
+    {/* Brand 01: Nuna */}
+    <section id="brands" className="brand-showcase">
+      <div className="img-wrap hover-target" style={{ aspectRatio: '4/5' }}>
+        <img src="/images/Nuna_Daipers_Front.jpg" alt="Nuna Diapers" />
+      </div>
+      <div className="meta">
+        <div className="number">01 — Baby Care</div>
+        <h3>Nuna<br />Diapers</h3>
+        <p>12-hour leak protection with premium Japanese absorbent polymers. Designed for Kenyan babies, tested to KEBS standards.</p>
+        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+          <span className="tag">Hypoallergenic</span>
+          <span className="tag">12h Protection</span>
+          <span className="tag">Soft Touch</span>
+        </div>
+        <Link href="/brands/nuna-diapers" className="btn btn-outline hover-target" style={{ alignSelf: 'flex-start', marginTop: '1rem', display: 'inline-flex', alignItems: 'center', gap: '0.625rem' }}>
+          View Product
+          <ArrowUpRight style={{ width: '16px', height: '16px' }} />
+        </Link>
+      </div>
+    </section>
 
-    <section className="advantage-section"><div><p className="section-kicker">The Dextron advantage</p><h2 data-reveal>Quality should be<br />a right, not <span>a luxury.</span></h2></div><p className="advantage-intro" data-reveal>For years, Kenyan families had to choose between expensive imported brands or inferior alternatives. Dextron was founded to change that.</p><div className="advantage-list">{[['01','30% to 40% more value','Direct local manufacturing removes foreign import tariffs, creating real value without compromising material quality.'],['02','Zero compromise on safety','We use premium materials and rigorous quality testing aligned with KEBS standards.'],['03','Dependable retail restocking','Our distribution network keeps products available for households, shops and wholesalers nationwide.']].map(([number,title,body]) => <article key={number} data-reveal><span>{number}</span><div><h3>{title}</h3><p>{body}</p></div></article>)}</div></section>
+    {/* Brand 02: Nunalac */}
+    <section className="brand-showcase reverse">
+      <div className="img-wrap hover-target" style={{ aspectRatio: '4/5' }}>
+        <img src="/images/Nunalac_Infant_formula.jpg" alt="Nunalac Cereal" />
+      </div>
+      <div className="meta">
+        <div className="number">02 — Infant Nutrition</div>
+        <h3>Nunalac<br />Cereal</h3>
+        <p>Iron and vitamin fortified infant cereal. Nurturing growth from the very first spoonful with natural wheat and prebiotics.</p>
+        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+          <span className="tag">Iron Fortified</span>
+          <span className="tag">Vitamin D</span>
+          <span className="tag">Prebiotics</span>
+        </div>
+        <Link href="/brands/nunalac" className="btn btn-outline hover-target" style={{ alignSelf: 'flex-start', marginTop: '1rem', display: 'inline-flex', alignItems: 'center', gap: '0.625rem' }}>
+          View Product
+          <ArrowUpRight style={{ width: '16px', height: '16px' }} />
+        </Link>
+      </div>
+    </section>
 
-    <section className="voices-section"><p className="section-kicker">Customer voices</p><h2 data-reveal>Trusted by Kenyan<br />mothers &amp; stockists.</h2><div className="voice-grid">{[['“Affordable, dependable, and trusted by mothers. Nuna diapers have been a game-changer for my family.”','Faith Wanjiku','Nairobi · Nuna Diapers'],['“Knowing Nunalac is made with care gives me peace of mind at every meal time.”','Amina Hassan','Mombasa · Nunalac'],['“Our customers keep coming back for Bilan. It’s a product we can confidently stock.”','Peter Kamau','Eastleigh · Retail partner']].map(([quote,name,meta]) => <article key={name} data-reveal><b>★★★★★</b><blockquote>{quote}</blockquote><footer><strong>{name}</strong><span>{meta}</span></footer></article>)}</div></section>
+    {/* Brand 03: Bilan */}
+    <section className="brand-showcase">
+      <div className="img-wrap hover-target" style={{ aspectRatio: '4/5' }}>
+        <img src="/images/BilanAlwaysRegular.webp" alt="Bilan Pads" />
+      </div>
+      <div className="meta">
+        <div className="number">03 — Feminine Care</div>
+        <h3>Bilan<br />Pads</h3>
+        <p>Superior comfort with hypoallergenic fibers. Designed for Kenyan women, tested rigorously to meet KEBS standards KS EAS 96 & 72.</p>
+        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+          <span className="tag">Superior Comfort</span>
+          <span className="tag">Hypoallergenic</span>
+          <span className="tag">KEBS Certified</span>
+        </div>
+        <Link href="/brands/bilan" className="btn btn-outline hover-target" style={{ alignSelf: 'flex-start', marginTop: '1rem', display: 'inline-flex', alignItems: 'center', gap: '0.625rem' }}>
+          View Product
+          <ArrowUpRight style={{ width: '16px', height: '16px' }} />
+        </Link>
+      </div>
+    </section>
 
-    <section className="clean-cta"><p className="section-kicker">Instant care &amp; ordering</p><h2 data-reveal>Ready to experience<br />the <span>Dextron</span> difference?</h2><p>Our Nairobi team can connect you with the nearest stockist or arrange direct dispatch for cartons and retail packs.</p><div><a className="clean-button whatsapp" href={getWhatsAppLink('Hello Dextron Enterprise! I would like to order products.')} target="_blank" rel="noopener noreferrer"><MessageCircle /> Chat on WhatsApp</a><a className="clean-button light" href="tel:+254722750766"><Phone /> Call sales desk</a></div></section>
+    {/* Advantage */}
+    <section id="advantage" style={{ padding: '8rem 2.5rem', background: '#fafafa' }}>
+      <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6rem', marginBottom: '6rem' }}>
+          <div>
+            <div className="section-label reveal">The Dextron Advantage</div>
+            <h2 className="section-title reveal">Quality should be<br />a right, not<br />a luxury.</h2>
+          </div>
+          <div className="reveal" style={{ alignSelf: 'end' }}>
+            <p style={{ fontSize: '1.125rem', lineHeight: '1.6', color: '#525252' }}>
+              For years, Kenyan families had to choose between paying exorbitant prices for imported multinational brands or settling for inferior alternatives. Dextron was founded to change that.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <div className="adv-item reveal">
+            <div className="num">01</div>
+            <div>
+              <h4>30% to 40% More Value</h4>
+              <p>Direct manufacturing in Nairobi removes foreign import tariffs, passing major savings directly to Kenyan shoppers without compromising on material quality.</p>
+            </div>
+          </div>
+          <div className="adv-item reveal">
+            <div className="num">02</div>
+            <div>
+              <h4>Zero Compromise on Safety</h4>
+              <p>We use premium Japanese absorbent polymers and hypoallergenic fibers, tested rigorously to meet and exceed KEBS standards (KS EAS 96 & 72).</p>
+            </div>
+          </div>
+          <div className="adv-item reveal">
+            <div className="num">03</div>
+            <div>
+              <h4>Dependable Retail Restocking</h4>
+              <p>No shipping delays or stockouts. Our distribution warehouse supplies retailers across Kenya with guaranteed weekly stock.</p>
+            </div>
+          </div>
+          <div className="adv-item reveal">
+            <div className="num">04</div>
+            <div>
+              <h4>Under One Roof</h4>
+              <p>From the first concept to the day your family trusts our products — our architects, designers and builders all work under one roof.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Testimonials */}
+    <section id="voices" style={{ padding: '8rem 2.5rem' }}>
+      <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'end', marginBottom: '6rem' }}>
+          <div>
+            <div className="section-label reveal">Customer Voices</div>
+          </div>
+          <div>
+            <h2 className="section-title reveal">Trusted by Kenyan<br />mothers &amp; stockists.</h2>
+          </div>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem' }}>
+          <div className="testimonial reveal hover-target">
+            <div style={{ color: '#f59e0b', fontSize: '0.875rem' }}>★★★★★</div>
+            <p className="quote">"Affordable, dependable, and trusted by mothers. Nuna diapers have been a game-changer for my family."</p>
+            <div style={{ paddingTop: '1.5rem', borderTop: '1px solid #e5e5e5' }}>
+              <div style={{ fontWeight: '700', fontSize: '0.9375rem' }}>Wanjiku M.</div>
+              <div style={{ fontSize: '0.75rem', color: '#737373', marginTop: '0.25rem' }}>Nairobi · Nuna Diapers</div>
+            </div>
+          </div>
+
+          <div className="testimonial reveal hover-target">
+            <div style={{ color: '#f59e0b', fontSize: '0.875rem' }}>★★★★★</div>
+            <p className="quote">"My baby loves Nunalac cereal. The iron fortification gives me peace of mind as a first-time mother."</p>
+            <div style={{ paddingTop: '1.5rem', borderTop: '1px solid #e5e5e5' }}>
+              <div style={{ fontWeight: '700', fontSize: '0.9375rem' }}>Achieng O.</div>
+              <div style={{ fontSize: '0.75rem', color: '#737373', marginTop: '0.25rem' }}>Mombasa · Nunalac Cereal</div>
+            </div>
+          </div>
+
+          <div className="testimonial reveal hover-target">
+            <div style={{ color: '#f59e0b', fontSize: '0.875rem' }}>★★★★★</div>
+            <p className="quote">"As a retailer, Dextron's restocking is reliable. My customers keep coming back for Bilan pads."</p>
+            <div style={{ paddingTop: '1.5rem', borderTop: '1px solid #e5e5e5' }}>
+              <div style={{ fontWeight: '700', fontSize: '0.9375rem' }}>James K.</div>
+              <div style={{ fontSize: '0.75rem', color: '#737373', marginTop: '0.25rem' }}>Nakuru · Retail Partner</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* CTA */}
+    <section id="contact" className="cta-section">
+      <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+        <div className="reveal" style={{ marginBottom: '3rem' }}>
+          <div style={{ fontSize: '0.6875rem', fontWeight: '500', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#737373' }}>Instant Customer Care &amp; Ordering</div>
+        </div>
+        <h2 className="cta-title reveal">
+          Ready to experience<br />
+          the <span className="accent">Dextron</span><br />
+          difference?
+        </h2>
+        <p className="reveal" style={{ fontSize: '1.125rem', color: '#a3a3a3', maxWidth: '32rem', marginTop: '3rem', lineHeight: '1.6' }}>
+          Our sales team in Nairobi is ready to connect you with the nearest stockist or arrange direct doorstep dispatch for cartons and retail packs.
+        </p>
+        <div className="reveal" style={{ marginTop: '4rem', display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+          <a href={getWhatsAppLink('Hello Dextron Enterprise! I would like to order products.')} target="_blank" rel="noopener noreferrer" className="btn btn-primary hover-target" style={{ background: '#16a34a', display: 'inline-flex', alignItems: 'center', gap: '0.625rem' }}>
+            <MessageCircle style={{ width: '16px', height: '16px' }} />
+            Chat on WhatsApp
+          </a>
+          <a href="tel:+254722750766" className="btn btn-outline hover-target" style={{ borderColor: '#404040', color: '#fff', display: 'inline-flex', alignItems: 'center', gap: '0.625rem' }}>
+            <Phone style={{ width: '16px', height: '16px' }} />
+            Call +254 722 750766
+          </a>
+        </div>
+      </div>
+    </section>
   </main>;
 }
