@@ -1,30 +1,33 @@
 import Link from 'next/link';
-import { ArrowDownRight, ArrowUpRight, MapPin, MessageCircle } from 'lucide-react';
-import { getWhatsAppLink } from '@/lib/whatsapp';
+import { ArrowDown, ArrowUpRight, MapPin } from 'lucide-react';
 
-const products = [
-  { number: '01', name: 'Nuna', category: 'Premium baby diapers', note: 'Soft, secure care for every growing stage.', image: '/images/Nuna_Daipers_Front.jpg', tone: 'orange', href: '/brands/nuna-diapers' },
-  { number: '02', name: 'Nunalac+', category: 'Infant formula', note: 'Nourishing beginnings, made with care.', image: '/images/Nunalac_Infant_formula_single.webp', tone: 'gold', href: '/brands/nunalac' },
-  { number: '03', name: 'Bilan', category: 'Feminine care', note: 'Everyday confidence, beautifully considered.', image: '/images/BilanAlwaysRegular.webp', tone: 'violet', href: '/brands/bilan' },
+const brands = [
+  { name: 'Nuna Diapers', type: 'Baby care', year: '12-hour protection', image: '/images/cutouts/Nuna_Daipers_Front.png', href: '/brands/nuna-diapers' },
+  { name: 'Nunalac+', type: 'Infant nutrition', year: 'Stage 1 • 0–12 months', image: '/images/cutouts/Nunalac_Infant_formula_single.png', href: '/brands/nunalac' },
+  { name: 'Bilan', type: 'Feminine hygiene', year: 'Everyday protection', image: '/images/cutouts/BilanAlwaysRegular.png', href: '/brands/bilan' },
 ];
 
 export default function HomePage() {
-  return <main className="site-shell">
-    <section className="hero"><div className="hero-grid" /><div className="hero-inner">
-      <p className="eyebrow hero-kicker">Dextron Enterprise / Kenya</p>
-      <div className="hero-copy"><h1><span>Essential care,</span><em>made for life.</em></h1><p className="hero-description">Thoughtfully made everyday essentials for Kenyan families — from a baby’s first days to the moments that make a house feel like home.</p></div>
-      <div className="hero-actions"><a className="round-link" href="#products" aria-label="Explore our brands"><ArrowDownRight /></a><span>Scroll to discover<br />our family of brands</span></div>
-      <div className="hero-product product-float"><img src="/images/Nuna_Daipers_Front.jpg" alt="Nuna premium baby diapers" /></div><div className="hero-stamp">QUALITY<br />IN EVERY<br />DAY <i>✦</i></div>
-    </div></section>
+  return <main className="foundry-home">
+    <section className="sf-hero">
+      <div className="sf-hero-visual" data-image-reveal><img src="/images/cutouts/Nunalac_Infant_formula.png" alt="Nunalac infant formula" /></div>
+      <div className="sf-hero-info"><span>Dextron Enterprise</span><span>Kenya / Est. 2014</span></div>
+      <h1 data-split>Everyday care,<br /><i>exceptionally</i> made.</h1>
+      <div className="sf-hero-bottom"><p>Dextron is a Kenyan family-care company. We make essential products with care, consistency and real households in mind.</p><a href="#work" aria-label="Explore our brands"><ArrowDown /></a></div>
+    </section>
 
-    <section className="intro-section"><p className="eyebrow">01 / A Kenyan enterprise</p><div className="intro-layout"><h2>Care isn’t a category.<br /><em>It’s our calling.</em></h2><div className="intro-body"><p>Dextron Enterprise brings together trusted baby care, infant nutrition and feminine hygiene products under one family-first promise: reliable quality within reach.</p><Link className="text-link" href="/about">Meet Dextron <ArrowUpRight /></Link></div></div><div className="statement-strip"><span>For everyday rituals</span><span>For growing families</span><span>For Kenya</span></div></section>
+    <section className="sf-intro" data-reveal><p className="sf-label">(Our approach)</p><div><h2>Care that grows<br />with <i>you.</i></h2><p>From a baby’s first days to the small routines that keep a home moving, Dextron brings dependable quality closer to Kenyan families.</p></div></section>
 
-    <section id="products" className="products-section"><div className="section-topline"><p className="eyebrow">02 / Our brands</p><span>Three considered essentials,<br />one trusted home.</span></div><div className="product-list">{products.map((product, index) => <article className={`product-row ${product.tone}`} key={product.name}><div className="product-index">{product.number}</div><div className="product-text"><p>{product.category}</p><h3>{product.name}</h3><span>{product.note}</span></div><div className="product-image-wrap"><img src={product.image} alt={product.name} className={index === 1 ? 'product-image formula' : 'product-image'} /></div><Link href={product.href} className="product-open" aria-label={`Discover ${product.name}`}><ArrowUpRight /></Link></article>)}</div></section>
+    <section className="sf-work" id="work"><div className="sf-section-head"><p className="sf-label">(Our brands)</p><p>Each brand is thoughtfully made for a different kind of everyday care.</p></div><div className="sf-work-list">{brands.map((brand, i) => <article className="sf-project" key={brand.name} data-reveal><Link href={brand.href} className="sf-project-link"><div className={`sf-project-art project-${i + 1}`} data-image-reveal><img src={brand.image} alt={brand.name} /></div><div className="sf-project-meta"><span>{brand.type}</span><span>{brand.year}</span></div><div className="sf-project-title"><h3>{brand.name}</h3><ArrowUpRight /></div></Link></article>)}</div></section>
 
-    <section className="quality-section"><div className="quality-copy"><p className="eyebrow">03 / The Dextron standard</p><h2>Practical quality.<br /><em>Deeply human.</em></h2></div><div className="quality-notes"><div><b>01</b><h3>Made for real life</h3><p>Products designed around the rhythm, needs and budgets of Kenyan homes.</p></div><div><b>02</b><h3>Quality you can trust</h3><p>Carefully produced essentials with a commitment to dependable standards.</p></div><div><b>03</b><h3>Close to home</h3><p>Built for families and stocked for communities across the country.</p></div></div></section>
+    <section className="sf-marquee" aria-hidden="true"><div>FOR FAMILIES <i>•</i> FOR EVERYDAY <i>•</i> FOR KENYA <i>•</i> FOR FAMILIES <i>•</i></div></section>
 
-    <section className="bilan-feature"><div className="bilan-copy"><p className="eyebrow">Bilan / Everyday comfort</p><h2>Feel like<br /><em>yourself.</em></h2><p>Protection that moves with you — designed to make confidence feel effortless.</p><Link href="/brands/bilan" className="light-link">Discover Bilan <ArrowUpRight /></Link></div><div className="bilan-products"><img className="bilan-three" src="/images/BilanUltraThinAlwaysSize3.webp" alt="Bilan Ultra Thin Size 3" /><img className="bilan-four" src="/images/BilanUltraThinAlwaysSize4.webp" alt="Bilan Ultra Thin Size 4" /></div></section>
-    <section className="where-section"><p className="eyebrow">04 / Find us nearby</p><h2>Made here.<br />Found <em>everywhere.</em></h2><div className="where-bottom"><p>Connect with a stockist near you, or speak with our team about ordering for your home, shop or community.</p><Link href="/where-to-buy" className="pill-link">Find a stockist <MapPin /></Link></div></section>
-    <section className="contact-banner"><p>Let’s bring everyday care closer.</p><a href={getWhatsAppLink('Hello Dextron Enterprise! I would like to order products.')} target="_blank" rel="noopener noreferrer">Start a conversation <MessageCircle /></a></section>
+    <section className="sf-values"><div className="sf-values-copy" data-reveal><p className="sf-label">(The Dextron standard)</p><h2>Built on trust.<br />Designed for <i>life.</i></h2></div><div className="sf-values-list"><article data-reveal><span>01</span><h3>Thoughtful by nature</h3><p>We make products for the people who rely on them — considered in use, comfortable in hand, and practical for everyday life.</p></article><article data-reveal><span>02</span><h3>Reliable in every detail</h3><p>Our commitment to consistent quality means every pack is made to meet the standards families deserve.</p></article><article data-reveal><span>03</span><h3>Proudly close to home</h3><p>Made with Kenyan households in mind and supplied through the shops and stockists that serve them.</p></article></div></section>
+
+    <section className="sf-bilan" data-reveal><div><p className="sf-label">(Bilan / feminine hygiene)</p><h2>Comfort that<br />lets you <i>move.</i></h2><p>Soft, discreet and made for confidence through every day.</p><Link href="/brands/bilan">Explore Bilan <ArrowUpRight /></Link></div><figure data-image-reveal><img src="/images/cutouts/BilanUltraThinAlwaysSize4.png" alt="Bilan Ultra Thin pads" /></figure></section>
+
+    <section className="sf-services"><p className="sf-label">(Made for every day)</p><div><h2>Baby care</h2><h2>Infant nutrition</h2><h2>Feminine hygiene</h2><h2>Home essentials</h2></div></section>
+
+    <section className="sf-contact"><div data-reveal><p className="sf-label">(Find Dextron)</p><h2>Care should<br />always feel <i>close.</i></h2></div><div className="sf-contact-action" data-reveal><p>Find a stockist nearby or talk to our team about products for your home, shop or community.</p><Link href="/where-to-buy">Find a stockist <MapPin /></Link></div></section>
   </main>;
 }

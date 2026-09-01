@@ -98,43 +98,43 @@ export const SEED_BRANDS: BrandData[] = [
       'Intelligent wetness indicator strip that changes color when it is time to change',
       'Unbeatable Kenyan value—premium performance competing directly with multinational brands'
     ],
-    heroImage: '/images/Nuna_Daipers_Front.jpg',
+    heroImage: '/images/cutouts/Nuna_Daipers_Front.png',
     productImages: [
-      '/images/Nuna_Daipers_Front.jpg',
-      '/images/NunaDiaper_back.webp'
+      '/images/cutouts/Nuna_Daipers_Front.png',
+      '/images/cutouts/NunaDiaper_back.png'
     ],
     productLine: [
       {
         productName: 'Nuna Newborn Comfort (Size 1)',
-        productImage: '/images/Nuna_Daipers_Front.jpg',
+        productImage: '/images/cutouts/Nuna_Daipers_Front.png',
         productDescription: 'Specially shaped for umbilical cord care with velvet-soft touch for delicate newborn skin.',
         productBenefits: ['Umbilical cord notch protection', 'Rapid fluid absorption core', 'Hypoallergenic certified'],
         productSize: '2 - 5 kg (Pack of 44 / Jumbo 88 pcs)'
       },
       {
         productName: 'Nuna Mini Active (Size 2)',
-        productImage: '/images/Nuna_Daipers_Front.jpg',
+        productImage: '/images/cutouts/Nuna_Daipers_Front.png',
         productDescription: 'Flexible side wings and snug fit designed for babies starting to roll and wiggle.',
         productBenefits: ['High-capacity fluid channels', 'Soft stretchy velcro tabs', 'Cottony breathable outer layer'],
         productSize: '3 - 6 kg (Pack of 40 / Jumbo 80 pcs)'
       },
       {
         productName: 'Nuna Midi Explorer (Size 3)',
-        productImage: '/images/Nuna_Daipers_Front.jpg',
+        productImage: '/images/cutouts/Nuna_Daipers_Front.png',
         productDescription: 'Engineered for crawling and active daytime play with zero sag and maximum leak protection.',
         productBenefits: ['Anti-sag core technology', '3D leak-proof side barriers', 'Up to 12 hours absorption'],
         productSize: '4 - 9 kg (Pack of 36 / Jumbo 72 pcs)'
       },
       {
         productName: 'Nuna Maxi Motion (Size 4)',
-        productImage: '/images/NunaDiaper_back.webp',
+        productImage: '/images/cutouts/NunaDiaper_back.png',
         productDescription: 'Maximum absorption capacity for energetic toddlers walking and climbing.',
         productBenefits: ['Double absorbent core', 'Flexible thigh cuffs', 'Zero nighttime leaks guarantee'],
         productSize: '7 - 18 kg (Pack of 32 / Jumbo 64 pcs)'
       },
       {
         productName: 'Nuna Junior Pants (Size 5)',
-        productImage: '/images/Nuna_Daipers_Front.jpg',
+        productImage: '/images/cutouts/Nuna_Daipers_Front.png',
         productDescription: 'Easy pull-up pants perfect for active toddlers and seamless potty training.',
         productBenefits: ['360° tear-away waistband', 'Easy pull-up and pull-down', 'Superior heavy-wetting absorption'],
         productSize: '11 - 25 kg (Pack of 28 / Jumbo 56 pcs)'
@@ -172,36 +172,36 @@ export const SEED_BRANDS: BrandData[] = [
       'Quick 2-minute preparation with warm clean water or milk',
       'Pure Kenyan grain formulation with no artificial preservatives, colorings, or sweeteners'
     ],
-    heroImage: '/images/Nunalac_Infant_formula.jpg',
+    heroImage: '/images/cutouts/Nunalac_Infant_formula.png',
     productImages: [
-      '/images/Nunalac_Infant_formula.jpg',
-      '/images/Nunalac_Infant_formula_single.webp'
+      '/images/cutouts/Nunalac_Infant_formula.png',
+      '/images/cutouts/Nunalac_Infant_formula_single.png'
     ],
     productLine: [
       {
         productName: 'Nunalac Wheat & Milk Baby Cereal',
-        productImage: '/images/Nunalac_Infant_formula_single.webp',
+        productImage: '/images/cutouts/Nunalac_Infant_formula_single.png',
         productDescription: 'The classic smooth starter cereal loaded with wholesome wheat and nutritious milk.',
         productBenefits: ['High protein for steady growth', 'Iron fortified', 'Naturally creamy taste'],
         productSize: '400g Tin / 250g Economy Box'
       },
       {
         productName: 'Nunalac Rice & Mixed Fruits',
-        productImage: '/images/Nunalac_Infant_formula.jpg',
+        productImage: '/images/cutouts/Nunalac_Infant_formula.png',
         productDescription: 'Gentle, gluten-free rice cereal infused with real banana and apple purees.',
         productBenefits: ['Gluten-free & gentle on sensitive tummies', 'Vitamin C for iron absorption', 'Digestive dietary fiber'],
         productSize: '400g Tin / 250g Economy Box'
       },
       {
         productName: 'Nunalac Multi-Grain & Honey (12m+)',
-        productImage: '/images/Nunalac_Infant_formula_single.webp',
+        productImage: '/images/cutouts/Nunalac_Infant_formula_single.png',
         productDescription: 'Hearty blend of whole wheat, oats, and maize lightly kissed with natural Kenyan honey.',
         productBenefits: ['Sustained energy for active toddlers', 'B-complex vitamins for vitality', 'Rich texture'],
         productSize: '400g Tin'
       },
       {
         productName: 'Nunalac Infant Soya Oats',
-        productImage: '/images/Nunalac_Infant_formula.jpg',
+        productImage: '/images/cutouts/Nunalac_Infant_formula.png',
         productDescription: 'High-protein soya and prebiotic oat porridge formulation for optimal weight gain.',
         productBenefits: ['Plant-powered protein', 'Prebiotic dietary fiber', 'Lactose-friendly alternative'],
         productSize: '400g Tin'
@@ -239,37 +239,37 @@ export const SEED_BRANDS: BrandData[] = [
       'Discreet, ultra-slim ergonomic silhouette invisible under clothes',
       'Reliable, dignity-first personal care priced for consistent everyday access'
     ],
-    heroImage: '/images/BilanAlwaysRegular.webp',
+    heroImage: '/images/cutouts/BilanAlwaysRegular.png',
     productImages: [
-      '/images/BilanAlwaysRegular.webp',
-      '/images/BilanUltraThinAlwaysSize3.webp',
-      '/images/BilanUltraThinAlwaysSize4.webp'
+      '/images/cutouts/BilanAlwaysRegular.png',
+      '/images/cutouts/BilanUltraThinAlwaysSize3.png',
+      '/images/cutouts/BilanUltraThinAlwaysSize4.png'
     ],
     productLine: [
       {
         productName: 'Bilan Ultra Thin Regular (with Wings)',
-        productImage: '/images/BilanAlwaysRegular.webp',
+        productImage: '/images/cutouts/BilanAlwaysRegular.png',
         productDescription: 'Daytime comfort pad with instant-dry gel core for moderate menstrual flow.',
         productBenefits: ['Ultra-thin 240mm length', 'Wide side wings', 'Anti-bunching adhesive strip'],
         productSize: 'Pack of 8 / Pack of 16 / Value 32 pcs'
       },
       {
         productName: 'Bilan Super Long Night Protection (with Wings)',
-        productImage: '/images/BilanUltraThinAlwaysSize4.webp',
+        productImage: '/images/cutouts/BilanUltraThinAlwaysSize4.png',
         productDescription: 'Extended 290mm pad with wider back coverage for 100% leak-proof sleep.',
         productBenefits: ['290mm extended back flare', 'Overnight heavy flow absorption', 'Double wings for stability'],
         productSize: 'Pack of 8 / Pack of 16 pcs'
       },
       {
         productName: 'Bilan Maxi Heavy Flow Extra (Size 3)',
-        productImage: '/images/BilanUltraThinAlwaysSize3.webp',
+        productImage: '/images/cutouts/BilanUltraThinAlwaysSize3.png',
         productDescription: 'Thick, cushion-soft pad for postpartum and very heavy flow days.',
         productBenefits: ['Extra cushioned volume', 'Fast absorption core', 'High side barriers'],
         productSize: 'Pack of 10 pcs'
       },
       {
         productName: 'Bilan Daily Breathable Pantyliners',
-        productImage: '/images/BilanAlwaysRegular.webp',
+        productImage: '/images/cutouts/BilanAlwaysRegular.png',
         productDescription: 'Feather-light daily liners for everyday freshness and light discharge.',
         productBenefits: ['Breathable cotton layer', 'Anatomical contoured fit', 'Gentle on sensitive skin'],
         productSize: 'Pack of 20 / Value 40 pcs'
