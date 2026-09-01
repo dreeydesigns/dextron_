@@ -70,7 +70,7 @@ export default function MotionSystem() {
     // Hero animations
     const heroTitle = document.getElementById('heroTitle');
     if (heroTitle) {
-      const split = new SplitType(heroTitle, { types: 'words, chars' });
+      const split = new SplitType(heroTitle, { types: 'words,chars' });
       
       split.words.forEach(word => {
         word.querySelectorAll('.char').forEach((ch: Element) => {
