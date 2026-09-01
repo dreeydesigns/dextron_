@@ -1,33 +1,29 @@
 import Link from 'next/link';
-import { ArrowDown, ArrowUpRight, MapPin } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, MapPin, MessageCircle, Phone } from 'lucide-react';
+import { getWhatsAppLink } from '@/lib/whatsapp';
 
 const brands = [
-  { name: 'Nuna Diapers', type: 'Baby care', year: '12-hour protection', image: '/images/cutouts/Nuna_Daipers_Front.png', href: '/brands/nuna-diapers' },
-  { name: 'Nunalac+', type: 'Infant nutrition', year: 'Stage 1 • 0–12 months', image: '/images/cutouts/Nunalac_Infant_formula_single.png', href: '/brands/nunalac' },
-  { name: 'Bilan', type: 'Feminine hygiene', year: 'Everyday protection', image: '/images/cutouts/BilanAlwaysRegular.png', href: '/brands/bilan' },
+  { id: '01', eyebrow: 'Baby care', name: <>Nuna<br />Diapers</>, description: '12-hour leak protection with premium Japanese absorbent polymers. Designed for Kenyan babies, tested to KEBS standards.', tags: ['Hypoallergenic', '12h protection', 'Soft touch'], image: '/images/Nuna_Daipers_Front.jpg', href: '/brands/nuna-diapers', colour: 'nuna' },
+  { id: '02', eyebrow: 'Infant nutrition', name: <>Nunalac<br />Formula</>, description: 'Milk-based infant formula, crafted for nourishing beginnings and the confidence that comes with every spoonful.', tags: ['Stage 1', 'Milk based', '0–12 months'], image: '/images/Nunalac_Infant_formula_single.webp', href: '/brands/nunalac', colour: 'nunalac' },
+  { id: '03', eyebrow: 'Feminine care', name: <>Bilan<br />Pads</>, description: 'Superior comfort and dependable everyday protection, made for Kenyan women and active lives.', tags: ['Soft comfort', 'Ultra thin', 'Everyday care'], image: '/images/BilanAlwaysRegular.webp', href: '/brands/bilan', colour: 'bilan' },
 ];
 
 export default function HomePage() {
-  return <main className="foundry-home">
-    <section className="sf-hero">
-      <div className="sf-hero-visual" data-image-reveal><img src="/images/cutouts/Nunalac_Infant_formula.png" alt="Nunalac infant formula" /></div>
-      <div className="sf-hero-info"><span>Dextron Enterprise</span><span>Kenya / Est. 2014</span></div>
-      <h1 data-split>Everyday care,<br /><i>exceptionally</i> made.</h1>
-      <div className="sf-hero-bottom"><p>Dextron is a Kenyan family-care company. We make essential products with care, consistency and real households in mind.</p><a href="#work" aria-label="Explore our brands"><ArrowDown /></a></div>
+  return <main className="premium-home">
+    <section className="clean-hero">
+      <p className="hero-kicker">— Proudly Kenyan FMCG manufacturer</p>
+      <div><h1 data-split>Nurturing Kenyan<br />families with <span>quality<br />care.</span></h1><p className="hero-copy">Premium baby diapers, infant nutrition, feminine hygiene and household essentials — made for Kenyan families, priced for real life.</p><div className="hero-buttons"><a href={getWhatsAppLink('Hello Dextron Enterprise! I would like to order products.')} target="_blank" rel="noopener noreferrer" className="clean-button dark"><MessageCircle /> Order on WhatsApp</a><a href="#brands" className="clean-button">Explore brands <ArrowRight /></a></div></div>
+      <div className="hero-stats"><div><b>500+</b><span>Stockists nationwide</span></div><div><b>100%</b><span>KEBS certified</span></div><div><b>50K+</b><span>Happy households</span></div></div>
     </section>
 
-    <section className="sf-intro" data-reveal><p className="sf-label">(Our approach)</p><div><h2>Care that grows<br />with <i>you.</i></h2><p>From a baby’s first days to the small routines that keep a home moving, Dextron brings dependable quality closer to Kenyan families.</p></div></section>
+    <div className="clean-marquee"><div>NUNA <i>•</i> DIAPERS <i>•</i> NUNALAC <i>•</i> INFANT NUTRITION <i>•</i> BILAN <i>•</i> FEMININE CARE <i>•</i> SOFRESH <i>•</i> HOME ESSENTIALS <i>•</i></div></div>
 
-    <section className="sf-work" id="work"><div className="sf-section-head"><p className="sf-label">(Our brands)</p><p>Each brand is thoughtfully made for a different kind of everyday care.</p></div><div className="sf-work-list">{brands.map((brand, i) => <article className="sf-project" key={brand.name} data-reveal><Link href={brand.href} className="sf-project-link"><div className={`sf-project-art project-${i + 1}`} data-image-reveal><img src={brand.image} alt={brand.name} /></div><div className="sf-project-meta"><span>{brand.type}</span><span>{brand.year}</span></div><div className="sf-project-title"><h3>{brand.name}</h3><ArrowUpRight /></div></Link></article>)}</div></section>
+    <section id="brands" className="brand-series">{brands.map((brand, index) => <article className={`clean-brand ${brand.colour} ${index % 2 ? 'is-reverse' : ''}`} key={brand.id} data-reveal><div className="clean-art" data-image-reveal><img src={brand.image} alt={`${brand.eyebrow}: ${index === 1 ? 'Nunalac formula' : index === 0 ? 'Nuna diapers' : 'Bilan pads'}`} /></div><div className="clean-brand-copy"><p className="clean-index">{brand.id} — {brand.eyebrow}</p><h2>{brand.name}</h2><p className="clean-description">{brand.description}</p><div className="clean-tags">{brand.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><Link className="clean-button" href={brand.href}>View product <ArrowUpRight /></Link></div></article>)}</section>
 
-    <section className="sf-marquee" aria-hidden="true"><div>FOR FAMILIES <i>•</i> FOR EVERYDAY <i>•</i> FOR KENYA <i>•</i> FOR FAMILIES <i>•</i></div></section>
+    <section className="advantage-section"><div><p className="section-kicker">The Dextron advantage</p><h2 data-reveal>Quality should be<br />a right, not <span>a luxury.</span></h2></div><p className="advantage-intro" data-reveal>For years, Kenyan families had to choose between expensive imported brands or inferior alternatives. Dextron was founded to change that.</p><div className="advantage-list">{[['01','30% to 40% more value','Direct local manufacturing removes foreign import tariffs, creating real value without compromising material quality.'],['02','Zero compromise on safety','We use premium materials and rigorous quality testing aligned with KEBS standards.'],['03','Dependable retail restocking','Our distribution network keeps products available for households, shops and wholesalers nationwide.']].map(([number,title,body]) => <article key={number} data-reveal><span>{number}</span><div><h3>{title}</h3><p>{body}</p></div></article>)}</div></section>
 
-    <section className="sf-values"><div className="sf-values-copy" data-reveal><p className="sf-label">(The Dextron standard)</p><h2>Built on trust.<br />Designed for <i>life.</i></h2></div><div className="sf-values-list"><article data-reveal><span>01</span><h3>Thoughtful by nature</h3><p>We make products for the people who rely on them — considered in use, comfortable in hand, and practical for everyday life.</p></article><article data-reveal><span>02</span><h3>Reliable in every detail</h3><p>Our commitment to consistent quality means every pack is made to meet the standards families deserve.</p></article><article data-reveal><span>03</span><h3>Proudly close to home</h3><p>Made with Kenyan households in mind and supplied through the shops and stockists that serve them.</p></article></div></section>
+    <section className="voices-section"><p className="section-kicker">Customer voices</p><h2 data-reveal>Trusted by Kenyan<br />mothers &amp; stockists.</h2><div className="voice-grid">{[['“Affordable, dependable, and trusted by mothers. Nuna diapers have been a game-changer for my family.”','Faith Wanjiku','Nairobi · Nuna Diapers'],['“Knowing Nunalac is made with care gives me peace of mind at every meal time.”','Amina Hassan','Mombasa · Nunalac'],['“Our customers keep coming back for Bilan. It’s a product we can confidently stock.”','Peter Kamau','Eastleigh · Retail partner']].map(([quote,name,meta]) => <article key={name} data-reveal><b>★★★★★</b><blockquote>{quote}</blockquote><footer><strong>{name}</strong><span>{meta}</span></footer></article>)}</div></section>
 
-    <section className="sf-bilan" data-reveal><div><p className="sf-label">(Bilan / feminine hygiene)</p><h2>Comfort that<br />lets you <i>move.</i></h2><p>Soft, discreet and made for confidence through every day.</p><Link href="/brands/bilan">Explore Bilan <ArrowUpRight /></Link></div><figure data-image-reveal><img src="/images/cutouts/BilanUltraThinAlwaysSize4.png" alt="Bilan Ultra Thin pads" /></figure></section>
-
-    <section className="sf-services"><p className="sf-label">(Made for every day)</p><div><h2>Baby care</h2><h2>Infant nutrition</h2><h2>Feminine hygiene</h2><h2>Home essentials</h2></div></section>
-
-    <section className="sf-contact"><div data-reveal><p className="sf-label">(Find Dextron)</p><h2>Care should<br />always feel <i>close.</i></h2></div><div className="sf-contact-action" data-reveal><p>Find a stockist nearby or talk to our team about products for your home, shop or community.</p><Link href="/where-to-buy">Find a stockist <MapPin /></Link></div></section>
+    <section className="clean-cta"><p className="section-kicker">Instant care &amp; ordering</p><h2 data-reveal>Ready to experience<br />the <span>Dextron</span> difference?</h2><p>Our Nairobi team can connect you with the nearest stockist or arrange direct dispatch for cartons and retail packs.</p><div><a className="clean-button whatsapp" href={getWhatsAppLink('Hello Dextron Enterprise! I would like to order products.')} target="_blank" rel="noopener noreferrer"><MessageCircle /> Chat on WhatsApp</a><a className="clean-button light" href="tel:+254722750766"><Phone /> Call sales desk</a></div></section>
   </main>;
 }
