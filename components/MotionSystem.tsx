@@ -72,12 +72,14 @@ export default function MotionSystem() {
     if (heroTitle) {
       const split = new SplitType(heroTitle, { types: 'words,chars' });
       
-      split.words.forEach(word => {
-        word.querySelectorAll('.char').forEach((ch: Element) => {
-          (ch as HTMLElement).style.display = 'inline-block';
-          (ch as HTMLElement).style.transform = 'translateY(110%)';
+      if (split.words) {
+        split.words.forEach(word => {
+          word.querySelectorAll('.char').forEach((ch: Element) => {
+            (ch as HTMLElement).style.display = 'inline-block';
+            (ch as HTMLElement).style.transform = 'translateY(110%)';
+          });
         });
-      });
+      }
 
       gsap.to(heroTitle.querySelectorAll('.char'), {
         y: '0%',
@@ -138,16 +140,18 @@ export default function MotionSystem() {
     const ctaTitle = document.querySelector('.cta-title');
     if (ctaTitle) {
       const ctaSplit = new SplitType(ctaTitle, { types: 'words' });
-      ctaSplit.words.forEach(w => {
-        const inner = document.createElement('div');
-        inner.style.overflow = 'hidden';
-        inner.style.display = 'inline-block';
-        inner.style.verticalAlign = 'top';
-        w.parentNode?.insertBefore(inner, w);
-        inner.appendChild(w);
-        (w as HTMLElement).style.transform = 'translateY(110%)';
-        (w as HTMLElement).style.display = 'inline-block';
-      });
+      if (ctaSplit.words) {
+        ctaSplit.words.forEach(w => {
+          const inner = document.createElement('div');
+          inner.style.overflow = 'hidden';
+          inner.style.display = 'inline-block';
+          inner.style.verticalAlign = 'top';
+          w.parentNode?.insertBefore(inner, w);
+          inner.appendChild(w);
+          (w as HTMLElement).style.transform = 'translateY(110%)';
+          (w as HTMLElement).style.display = 'inline-block';
+        });
+      }
 
       ScrollTrigger.create({
         trigger: ctaTitle,
