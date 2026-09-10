@@ -137,7 +137,7 @@ export default function MotionSystem() {
     });
 
     // CTA title split
-    const ctaTitle = document.querySelector('.cta-title');
+    const ctaTitle = document.querySelector<HTMLElement>('.cta-title');
     if (ctaTitle) {
       const ctaSplit = new SplitType(ctaTitle, { types: 'words' });
       if (ctaSplit.words) {
