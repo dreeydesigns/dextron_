@@ -6,6 +6,39 @@ export interface ProductItem {
   productSize: string;
 }
 
+const NUNA_PRODUCTS: ProductItem[] = [
+  { productName: 'Nuna New 1-2 Diapers', productImage: '/images/nuna-diapers/size-1-2/front.webp', productDescription: 'Everyday diapers for newborns and small babies.', productBenefits: ['Soft comfort', 'Leak protection', 'Secure fit'], productSize: 'New 1-2, up to 8 kg - 38 count' },
+  { productName: 'Nuna New 1-2 Diapers', productImage: '/images/nuna-diapers/size-1-2-58-count/front.webp', productDescription: 'Value-pack diapers for newborns and small babies.', productBenefits: ['Soft comfort', 'Leak protection', 'Secure fit'], productSize: 'New 1-2, up to 8 kg - 58 count' },
+  { productName: 'Nuna M 3 Diapers', productImage: '/images/nuna-diapers/size-3/front.webp', productDescription: 'Comfortable protection for babies in size M.', productBenefits: ['Soft comfort', 'Leak protection', 'Secure fit'], productSize: 'M 3 - 36 count' },
+  { productName: 'Nuna M 3 Diapers', productImage: '/images/nuna-diapers/size-3-48-count/front.webp', productDescription: 'Value-pack protection for babies in size M.', productBenefits: ['Soft comfort', 'Leak protection', 'Secure fit'], productSize: 'M 3 - 48 count' },
+  { productName: 'Nuna M 3 Pants', productImage: '/images/nuna-diapers/size-3-pants/front.webp', productDescription: 'Pull-up pants for active babies in size M.', productBenefits: ['Easy pull-up fit', 'Leak protection', 'Soft comfort'], productSize: 'M 3 - 52 count' },
+  { productName: 'Nuna L 4 Diapers', productImage: '/images/nuna-diapers/size-4/front.webp', productDescription: 'Comfortable protection for babies in size L.', productBenefits: ['Soft comfort', 'Leak protection', 'Secure fit'], productSize: 'L 4 - 46 count' },
+  { productName: 'Nuna L 4 Diapers', productImage: '/images/nuna-diapers/size-4-48-count/front.webp', productDescription: 'Value-pack protection for babies in size L.', productBenefits: ['Soft comfort', 'Leak protection', 'Secure fit'], productSize: 'L 4 - 48 count' },
+  { productName: 'Nuna L 4 Pants', productImage: '/images/nuna-diapers/size-4-pants/front.webp', productDescription: 'Pull-up pants for active toddlers in size L.', productBenefits: ['Easy pull-up fit', 'Leak protection', 'Soft comfort'], productSize: 'L 4 - 50 count' },
+  { productName: 'Nuna Adult Diaper', productImage: '/images/nuna-diapers/adult-diaper-l-20/front.webp', productDescription: 'Adult diapers designed for dependable everyday care.', productBenefits: ['Leak protection', 'Comfortable fit', 'Easy to wear'], productSize: 'L - 20 count' },
+  { productName: 'Nuna XL 5 Diapers', productImage: '/images/nuna-diapers/size-5/front.webp', productDescription: 'Comfortable protection for toddlers in size XL.', productBenefits: ['Soft comfort', 'Leak protection', 'Secure fit'], productSize: 'XL 5 - 42 count' },
+  { productName: 'Nuna XL 5 Diapers', productImage: '/images/nuna-diapers/size-5-44-count/front.webp', productDescription: 'Value-pack protection for toddlers in size XL.', productBenefits: ['Soft comfort', 'Leak protection', 'Secure fit'], productSize: 'XL 5 - 44 count' },
+  { productName: 'Nuna XL 5 Pants', productImage: '/images/nuna-diapers/size-5-pants/front.webp', productDescription: 'Pull-up pants for active toddlers in size XL.', productBenefits: ['Easy pull-up fit', 'Leak protection', 'Soft comfort'], productSize: 'XL 5 - 48 count' },
+  { productName: 'Nuna Adult Diaper', productImage: '/images/nuna-diapers/adult-diaper-xl-20/front.webp', productDescription: 'Adult diapers designed for dependable everyday care.', productBenefits: ['Leak protection', 'Comfortable fit', 'Easy to wear'], productSize: 'XL - 20 count; waist 120-170 cm' },
+  { productName: 'Nuna XXL 6 Pants', productImage: '/images/nuna-diapers/size-6-pants/front.webp', productDescription: 'Pull-up pants for growing toddlers in size XXL.', productBenefits: ['Easy pull-up fit', 'Leak protection', 'Soft comfort'], productSize: 'XXL 6 - 46 count' },
+  { productName: 'Nuna XXXL 7 Pants', productImage: '/images/nuna-diapers/size-7-pants/front.webp', productDescription: 'Pull-up pants for bigger toddlers in size XXXL.', productBenefits: ['Easy pull-up fit', 'Leak protection', 'Soft comfort'], productSize: 'XXXL 7 - 38 count' },
+  { productName: 'Nuna Baby Wipes', productImage: '/images/nuna-diapers/wipes/front.webp', productDescription: 'Soft baby wipes for convenient everyday clean-ups.', productBenefits: ['Soft touch', 'Convenient pack', 'Everyday care'], productSize: '80 wipes' }
+];
+
+const NUNALAC_PRODUCTS: ProductItem[] = [
+  { productName: 'Nunalac+ Infant Formula Stage 1', productImage: '/images/nunalac/angle-01.webp', productDescription: 'Infant formula for the first stage of feeding.', productBenefits: ['Stage 1 formula', '0-6 months', '400g tin'], productSize: 'Stage 1, 0-6 months - 400g' },
+  { productName: 'Nunalac+ Infant Formula Stage 2', productImage: '/images/nunalac/angle-02.webp', productDescription: 'Follow-on formula for babies progressing to stage two.', productBenefits: ['Stage 2 formula', '6-12 months', '400g tin'], productSize: 'Stage 2, 6-12 months - 400g' },
+  { productName: 'Nuna Cereal+ Premium Rice & Milk', productImage: '/images/nunalac/angle-03.webp', productDescription: 'Rice and milk cereal for babies from six months.', productBenefits: ['6+ months', 'Easy to digest', '350g tin'], productSize: '6+ months - 350g' },
+  { productName: 'Nuna Cereal+ Premium Wheat, Milk & Dates', productImage: '/images/nunalac/angle-04.webp', productDescription: 'Wheat, milk and dates cereal for babies from six months.', productBenefits: ['6+ months', 'Easy to digest', '350g tin'], productSize: '6+ months - 350g' },
+  { productName: 'Nuna Cereal+ Premium Wheat, Milk & Honey', productImage: '/images/nunalac/angle-05.webp', productDescription: 'Wheat, milk and honey cereal for babies from six months.', productBenefits: ['6+ months', 'Easy to digest', '350g tin'], productSize: '6+ months - 350g' },
+  { productName: 'Nuna Cereal+ Premium Wheat with Milk', productImage: '/images/nunalac/angle-06.webp', productDescription: 'Wheat and milk cereal for babies from six months.', productBenefits: ['6+ months', 'Easy to digest', '350g tin'], productSize: '6+ months - 350g' }
+];
+
+const BILAN_PRODUCTS: ProductItem[] = [
+  { productName: 'Bilan Ultra Thin Size 3', productImage: '/images/bilan/size-3/front.webp', productDescription: 'Ultra-thin sanitary towels for everyday comfort and protection.', productBenefits: ['Ultra-thin design', 'Comfortable fit', '8+2 pads'], productSize: 'Size 3 - 8+2 pads' },
+  { productName: 'Bilan Ultra Thin Size 4', productImage: '/images/bilan/size-4/front.webp', productDescription: 'Ultra-thin sanitary towels for everyday comfort and protection.', productBenefits: ['Ultra-thin design', 'Comfortable fit', '8+2 pads'], productSize: 'Size 4 - 8+2 pads' }
+];
+
 export interface BrandData {
   _id: string;
   name: string;
@@ -98,48 +131,13 @@ export const SEED_BRANDS: BrandData[] = [
       'Intelligent wetness indicator strip that changes color when it is time to change',
       'Unbeatable Kenyan value—premium performance competing directly with multinational brands'
     ],
-    heroImage: '/images/cutouts/Nuna_Daipers_Front.png',
+    heroImage: '/images/nuna-diapers/size-1-2/front.webp',
     productImages: [
-      '/images/cutouts/Nuna_Daipers_Front.png',
-      '/images/cutouts/NunaDiaper_back.png'
+      '/images/nuna-diapers/size-1-2/front.webp',
+      '/images/nuna-diapers/size-1-2/angle-01.webp',
+      '/images/nuna-diapers/size-1-2/angle-03.webp'
     ],
-    productLine: [
-      {
-        productName: 'Nuna Newborn Comfort (Size 1)',
-        productImage: '/images/cutouts/Nuna_Daipers_Front.png',
-        productDescription: 'Specially shaped for umbilical cord care with velvet-soft touch for delicate newborn skin.',
-        productBenefits: ['Umbilical cord notch protection', 'Rapid fluid absorption core', 'Hypoallergenic certified'],
-        productSize: '2 - 5 kg (Pack of 44 / Jumbo 88 pcs)'
-      },
-      {
-        productName: 'Nuna Mini Active (Size 2)',
-        productImage: '/images/cutouts/Nuna_Daipers_Front.png',
-        productDescription: 'Flexible side wings and snug fit designed for babies starting to roll and wiggle.',
-        productBenefits: ['High-capacity fluid channels', 'Soft stretchy velcro tabs', 'Cottony breathable outer layer'],
-        productSize: '3 - 6 kg (Pack of 40 / Jumbo 80 pcs)'
-      },
-      {
-        productName: 'Nuna Midi Explorer (Size 3)',
-        productImage: '/images/cutouts/Nuna_Daipers_Front.png',
-        productDescription: 'Engineered for crawling and active daytime play with zero sag and maximum leak protection.',
-        productBenefits: ['Anti-sag core technology', '3D leak-proof side barriers', 'Up to 12 hours absorption'],
-        productSize: '4 - 9 kg (Pack of 36 / Jumbo 72 pcs)'
-      },
-      {
-        productName: 'Nuna Maxi Motion (Size 4)',
-        productImage: '/images/cutouts/NunaDiaper_back.png',
-        productDescription: 'Maximum absorption capacity for energetic toddlers walking and climbing.',
-        productBenefits: ['Double absorbent core', 'Flexible thigh cuffs', 'Zero nighttime leaks guarantee'],
-        productSize: '7 - 18 kg (Pack of 32 / Jumbo 64 pcs)'
-      },
-      {
-        productName: 'Nuna Junior Pants (Size 5)',
-        productImage: '/images/cutouts/Nuna_Daipers_Front.png',
-        productDescription: 'Easy pull-up pants perfect for active toddlers and seamless potty training.',
-        productBenefits: ['360° tear-away waistband', 'Easy pull-up and pull-down', 'Superior heavy-wetting absorption'],
-        productSize: '11 - 25 kg (Pack of 28 / Jumbo 56 pcs)'
-      }
-    ],
+    productLine: NUNA_PRODUCTS,
     usageInstructions:
       'Open the diaper flat with the fastening tabs at the back underneath your baby. Bring the front section up between your baby’s legs. Fasten the side tabs securely onto the front landing strip. Ensure the inner elastic leg ruffles are flared outward to prevent side leakage.',
     certifications: [
@@ -172,41 +170,13 @@ export const SEED_BRANDS: BrandData[] = [
       'Quick 2-minute preparation with warm clean water or milk',
       'Pure Kenyan grain formulation with no artificial preservatives, colorings, or sweeteners'
     ],
-    heroImage: '/images/cutouts/Nunalac_Infant_formula.png',
+    heroImage: '/images/nunalac/angle-01.webp',
     productImages: [
-      '/images/cutouts/Nunalac_Infant_formula.png',
-      '/images/cutouts/Nunalac_Infant_formula_single.png'
+      '/images/nunalac/angle-01.webp',
+      '/images/nunalac/angle-02.webp',
+      '/images/nunalac/angle-03.webp'
     ],
-    productLine: [
-      {
-        productName: 'Nunalac Wheat & Milk Baby Cereal',
-        productImage: '/images/cutouts/Nunalac_Infant_formula_single.png',
-        productDescription: 'The classic smooth starter cereal loaded with wholesome wheat and nutritious milk.',
-        productBenefits: ['High protein for steady growth', 'Iron fortified', 'Naturally creamy taste'],
-        productSize: '400g Tin / 250g Economy Box'
-      },
-      {
-        productName: 'Nunalac Rice & Mixed Fruits',
-        productImage: '/images/cutouts/Nunalac_Infant_formula.png',
-        productDescription: 'Gentle, gluten-free rice cereal infused with real banana and apple purees.',
-        productBenefits: ['Gluten-free & gentle on sensitive tummies', 'Vitamin C for iron absorption', 'Digestive dietary fiber'],
-        productSize: '400g Tin / 250g Economy Box'
-      },
-      {
-        productName: 'Nunalac Multi-Grain & Honey (12m+)',
-        productImage: '/images/cutouts/Nunalac_Infant_formula_single.png',
-        productDescription: 'Hearty blend of whole wheat, oats, and maize lightly kissed with natural Kenyan honey.',
-        productBenefits: ['Sustained energy for active toddlers', 'B-complex vitamins for vitality', 'Rich texture'],
-        productSize: '400g Tin'
-      },
-      {
-        productName: 'Nunalac Infant Soya Oats',
-        productImage: '/images/cutouts/Nunalac_Infant_formula.png',
-        productDescription: 'High-protein soya and prebiotic oat porridge formulation for optimal weight gain.',
-        productBenefits: ['Plant-powered protein', 'Prebiotic dietary fiber', 'Lactose-friendly alternative'],
-        productSize: '400g Tin'
-      }
-    ],
+    productLine: NUNALAC_PRODUCTS,
     usageInstructions:
       'Boil fresh drinking water for 5 minutes and allow it to cool to lukewarm (approx. 40°C). Pour 150ml of water or clean prepared milk into a sterilized feeding bowl. Add 5 level tablespoons of Nunalac cereal. Stir continuously until smooth and creamy. Feed baby immediately using a clean spoon.',
     certifications: [
@@ -239,42 +209,13 @@ export const SEED_BRANDS: BrandData[] = [
       'Discreet, ultra-slim ergonomic silhouette invisible under clothes',
       'Reliable, dignity-first personal care priced for consistent everyday access'
     ],
-    heroImage: '/images/cutouts/BilanAlwaysRegular.png',
+    heroImage: '/images/bilan/size-3/front.webp',
     productImages: [
-      '/images/cutouts/BilanAlwaysRegular.png',
-      '/images/cutouts/BilanUltraThinAlwaysSize3.png',
-      '/images/cutouts/BilanUltraThinAlwaysSize4.png'
+      '/images/bilan/size-3/front.webp',
+      '/images/bilan/size-3/angle-01.webp',
+      '/images/bilan/size-4/front.webp'
     ],
-    productLine: [
-      {
-        productName: 'Bilan Ultra Thin Regular (with Wings)',
-        productImage: '/images/cutouts/BilanAlwaysRegular.png',
-        productDescription: 'Daytime comfort pad with instant-dry gel core for moderate menstrual flow.',
-        productBenefits: ['Ultra-thin 240mm length', 'Wide side wings', 'Anti-bunching adhesive strip'],
-        productSize: 'Pack of 8 / Pack of 16 / Value 32 pcs'
-      },
-      {
-        productName: 'Bilan Super Long Night Protection (with Wings)',
-        productImage: '/images/cutouts/BilanUltraThinAlwaysSize4.png',
-        productDescription: 'Extended 290mm pad with wider back coverage for 100% leak-proof sleep.',
-        productBenefits: ['290mm extended back flare', 'Overnight heavy flow absorption', 'Double wings for stability'],
-        productSize: 'Pack of 8 / Pack of 16 pcs'
-      },
-      {
-        productName: 'Bilan Maxi Heavy Flow Extra (Size 3)',
-        productImage: '/images/cutouts/BilanUltraThinAlwaysSize3.png',
-        productDescription: 'Thick, cushion-soft pad for postpartum and very heavy flow days.',
-        productBenefits: ['Extra cushioned volume', 'Fast absorption core', 'High side barriers'],
-        productSize: 'Pack of 10 pcs'
-      },
-      {
-        productName: 'Bilan Daily Breathable Pantyliners',
-        productImage: '/images/cutouts/BilanAlwaysRegular.png',
-        productDescription: 'Feather-light daily liners for everyday freshness and light discharge.',
-        productBenefits: ['Breathable cotton layer', 'Anatomical contoured fit', 'Gentle on sensitive skin'],
-        productSize: 'Pack of 20 / Value 40 pcs'
-      }
-    ],
+    productLine: BILAN_PRODUCTS,
     usageInstructions:
       'Peel off the central release backing paper and press the adhesive side firmly into the crotch of your underwear. Peel the wing papers and wrap the wings snugly around the underside of your underwear. For best hygiene, change every 4 to 6 hours.',
     certifications: [
@@ -286,65 +227,6 @@ export const SEED_BRANDS: BrandData[] = [
     featured: true,
     order: 3
   },
-  {
-    _id: 'brand-sofresh-soclean',
-    name: 'SoFresh SoClean',
-    slug: { current: 'sofresh-soclean' },
-    tagline: 'A cleaner home for less.',
-    category: 'home-cleaning',
-    primaryColor: '#16A34A',
-    accentColor: '#15803D',
-    lightBg: '#F0FDF4',
-    borderClass: 'border-green-200',
-    badge: 'Tough on Grease, Fair on Price',
-    targetAudience: 'Kenyan households, caterers, institutions, and cleaning professionals',
-    description:
-      'SoFresh SoClean delivers high-potency cleaning power that cuts through tough grease, dirt, and stains without the expensive price tag. Formulated with biodegradable surfactants and uplifting citrus and floral fragrances, our cleaning range keeps Kenyan homes sparkling clean, hygienic, and fresh.',
-    keyBenefits: [
-      'Heavy-duty degreasing formula that instantly dissolves dried oils and burnt food',
-      'Kills 99.9% of common household germs, bacteria, and viruses',
-      'Concentrated long-lasting formulation—a little goes a very long way',
-      'Gentle on hands with added glycerin skin moisturizers',
-      'Cost-effective household essentials packaged in convenient economy sizes'
-    ],
-    heroImage: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80',
-    productLine: [
-      {
-        productName: 'SoFresh Lemon Sparkle Dishwashing Liquid',
-        productDescription: 'Super concentrated dish detergent with real lemon zest extract for spotless pots and plates.',
-        productBenefits: ['Instant grease cutter', 'Rich long-lasting foam', 'Gentle on hands with glycerin'],
-        productSize: '500ml Bottle / 750ml Squeeze / 5L Commercial Jerrycan'
-      },
-      {
-        productName: 'SoFresh Pine Disinfectant Floor & Tile Cleaner',
-        productDescription: 'Antibacterial multi-surface cleaner that leaves tiles gleaming and rooms smelling fresh.',
-        productBenefits: ['Kills 99.9% germs', 'Quick-dry streak-free formula', 'Long-lasting forest pine aroma'],
-        productSize: '1L Bottle / 5L Jerrycan'
-      },
-      {
-        productName: 'SoFresh Power Thick Bleach & Toilet Cleaner',
-        productDescription: 'Thick clinging bleach formula that removes stains, limescale, and toilet bowl grime.',
-        productBenefits: ['Thick formula clings to slopes', 'Deep disinfecting bleach action', 'Whitens and sanitizes'],
-        productSize: '750ml Angled Neck / 5L Jerrycan'
-      },
-      {
-        productName: 'SoFresh Floral Breeze Fabric Softener',
-        productDescription: 'Conditioning laundry rinse that softens clothes and locks in fresh spring floral perfume.',
-        productBenefits: ['Reduces static and creases', 'Easy ironing glide', 'Delightful 7-day fragrance hold'],
-        productSize: '1L Bottle / 2L Value Bottle'
-      }
-    ],
-    usageInstructions:
-      'For dishwashing, dilute one teaspoon in a bowl of warm water or apply a few drops directly to a damp sponge. For floor and surface cleaning, add 2 capfuls to a bucket of water (approx. 5 liters) and mop thoroughly. For stubborn toilet stains, apply thick bleach under the rim, leave for 15 minutes, brush and flush.',
-    certifications: [
-      'KEBS Quality Household Detergent Standard (KS 100)',
-      'Eco-Friendly Biodegradable Surfactants',
-      'ISO 9001 Quality Managed Manufacturing Facility'
-    ],
-    competitorContext: 'Delivers the cleaning punch of Sunlight and Vim at everyday pocket-friendly pricing for Kenyan families.',
-    featured: true,
-    order: 4
-  }
 ];
 
 export const SEED_STOCKISTS: StockistData[] = [
